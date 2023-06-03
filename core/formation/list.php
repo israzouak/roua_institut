@@ -53,6 +53,7 @@ try
                     </tr>
                 </table>
                 <button 
+                    onclick="consult_formation('.$line->id_formation.');"                
                     title="Afficher les détails de cette formation" 
                     style="padding: 4px 8px; border: none; border-radius: 5px; 
                            background-color: #66ccff; color: #fff; cursor: pointer;">

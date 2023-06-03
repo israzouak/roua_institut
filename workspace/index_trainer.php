@@ -60,11 +60,11 @@ $account = isset($_SESSION['connected']) ? $_SESSION['connected'] : header('loca
                     </div-->
                     <div class="ms-3">
                         <h6 class="mb-0"><?php echo $account->first_name_user . ' ' . $account->last_name_user; ?></h6>
-                        <small>Trainee</small>
+                        <small>Trainer</small>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.php" class="nav-item nav-link ">
+                    <a href="index_trainer.php" class="nav-item nav-link ">
                         <small>
                             <i class="fa fa-home bg-light"></i>
                             Home
@@ -86,10 +86,10 @@ $account = isset($_SESSION['connected']) ? $_SESSION['connected'] : header('loca
                             </small>
                         </div>
                     </div>
-                    <a href="#" class="nav-item nav-link" onclick="list_my_subscriptions();">
+                    <a href="#" class="nav-item nav-link" onclick="list_my_affectations();">
                         <small>
                             <i class="bi bi-pencil-square bg-light"></i>
-                            My Subscriptions
+                            My Affectations
                         </small>
                     </a>
                     <!--a href="table.html" class="nav-item nav-link">
@@ -277,7 +277,7 @@ $account = isset($_SESSION['connected']) ? $_SESSION['connected'] : header('loca
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/global.js"></script>
+    <script src="js/global_trainer.js"></script>
 </body>
 
 </html>

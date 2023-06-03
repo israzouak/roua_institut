@@ -1,0 +1,54 @@
+<div class="row h-100 justify-content-center" style="min-height: 100vh;">
+    <div class="col-12">
+        <div class="bg-light rounded">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h5>New Trainer</h5>
+            </div>
+            <form method="post" action="core/user/add_for_admin.php">
+                <input type="hidden" name="type" value="2" required>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="Mohamed">
+                    <label for="first_name">First name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Khalfi">
+                    <label for="last_name">Last name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
+                    <label for="email">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="mobile" id="mobile" placeholder="00 00 00 00 00">
+                    <label for="mobile">Mobile</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" name="birth_date" id="birth_date" placeholder="01/01/2000">
+                    <label for="birth_date">Birth date</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="address" id="address"
+                        placeholder="Blc N°0 City 00000 Willaya">
+                    <label for="address">Address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" name="biography" id="biography" placeholder="About you"></textarea>
+                    <label for="biography">About you</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="login" id="login" placeholder="mohamed_khalfi">
+                    <label for="login">Your login</label>
+                </div>
+                <div class="form-floating mb-4">
+                    <input type="password" class="form-control" name="password" id="password"
+                        placeholder="Your password">
+                    <label for="password">Your password</label>
+                </div>
+                <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign Up</button>
+                <p class="text-center mb-0">
+                    <small>Already have an Account? <a href="signin.html">Sign In</a></small>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

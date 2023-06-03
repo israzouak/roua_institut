@@ -17,8 +17,8 @@ try
         switch($account->type_user)
         {
             case 1: header('location: ../../index.php'); break;
-            case 2: header('location: ../../trainer.php'); break;
-            case 3: header('location: ../../admin.php'); break;
+            case 2: header('location: ../../index_trainer.php'); break;
+            case 3: header('location: ../../index_admin.php'); break;
         }
     }
     else 

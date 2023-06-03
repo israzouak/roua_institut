@@ -3,6 +3,14 @@ $(document).ready(function () {
     list_all_formations()
 })
 
+function list_trainees(idf) {
+    $.post("core/user/list_for_trainer.php", {idf:idf}, function (data) { $("div#display").html(data) }, 'text')
+}
+
+function list_my_affectations() {
+    $("div#display").load("core/formation/list_for_trainer.php")  
+}
+
 function add_subscription(idf) {
     $.post("core/subscription/add.php", {idf:idf}, function (data) { alert(data) }, 'text')
 }

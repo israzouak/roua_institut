@@ -5,6 +5,10 @@ $(document).ready(function () {
     list_all_formations()
 })
 
+function consult_formation(id) {
+    $.post("core/formation/consult.php", {id:id}, function (data) { $("div#formations").html(data) }, 'text')
+}
+
 function list_all_formations() {
     $("div#formations").load("core/formation/list_all.php")    
 }

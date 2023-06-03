@@ -3,6 +3,7 @@ require_once "../_treatments.php";
 
 try 
 {
+    $account = isset($_SESSION['connected']) ? $_SESSION['connected'] : header('location: core/user/logout.php');
     $html = "";
     $post = (isset($_POST) && count($_POST) > 0) ? $_POST : _treatments::throw_exception("Id formation not found !!!");
     $cmd = "SELECT f.*, a.*, t.*, d.*
@@ -18,6 +19,18 @@ try
 
     if(isset($line))
     {
+        $button = ($account->type_user == 1) ? '
+        <button 
+            onclick="add_subscription('.$line->id_formation.');" 
+            title="Afficher les détails de cette formation" 
+            style="padding: 4px 8px; border: none; border-radius: 5px; 
+                background-color: #66ccff; color: #fff; cursor: pointer;">
+            <small style="font-size: 12px;">
+                <i class="bi bi-pencil-square"></i>
+                Subscribe
+            </small>
+        </button>' : '';
+        
         $html = '
         <div style="text-align: left;">
             <h5 style="padding: 0px 8px; color: #0099ff;">'.$line->title_formation.'</h5>
@@ -51,15 +64,7 @@ try
             </p>
 
             <div style="text-align: right; padding: 10px; border-bottom: solid 1px #ccc;">
-                <button 
-                    title="Afficher les détails de cette formation" 
-                    style="padding: 4px 8px; border: none; border-radius: 5px; 
-                        background-color: #66ccff; color: #fff; cursor: pointer;">
-                    <small style="font-size: 12px;">
-                        <i class="bi bi-pencil-square"></i>
-                        Subscription
-                    </small>
-                </button>
+                '.$button.'
             </div>
         </div>';
     }

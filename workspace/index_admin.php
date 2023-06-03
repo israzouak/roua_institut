@@ -60,46 +60,34 @@ $account = isset($_SESSION['connected']) ? $_SESSION['connected'] : header('loca
                     </div-->
                     <div class="ms-3">
                         <h6 class="mb-0"><?php echo $account->first_name_user . ' ' . $account->last_name_user; ?></h6>
-                        <small>Trainee</small>
+                        <small>Admin</small>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.php" class="nav-item nav-link ">
+                    <a href="#" class="nav-item nav-link" onclick="list_domaines();">
                         <small>
-                            <i class="fa fa-home bg-light"></i>
-                            Home
+                            <i class="fa fa-list bg-light"></i>
+                            Domaines
                         </small>
                     </a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <small>
-                                <i class="bi bi-easel-fill bg-light me-2"></i>
-                                Formations
-                            </small>
-                        </a>
-                        <div class="dropdown-menu bg-transparent border-0" style="padding-left: 50px;">
-                            <small id="domaines">
-                                <a href="#" class="dropdown-item">Domaine 1</a>
-                                <a href="#" class="dropdown-item">Domaine 2</a>
-                                <a href="#" class="dropdown-item">Domaine 3</a>
-                                <a href="#" class="dropdown-item">Domaine 4</a>
-                            </small>
-                        </div>
-                    </div>
-                    <a href="#" class="nav-item nav-link" onclick="list_my_subscriptions();">
+                    <a href="#" class="nav-item nav-link" onclick="list_all_formations();">
                         <small>
-                            <i class="bi bi-pencil-square bg-light"></i>
-                            My Subscriptions
+                            <i class="fa fa-list bg-light"></i>
+                            Formations
                         </small>
                     </a>
-                    <!--a href="table.html" class="nav-item nav-link">
-                        <i class="fa fa-table me-2"></i>
-                        Tables
+                    <a href="#" class="nav-item nav-link" onclick="list_all_trainers();">
+                        <small>
+                            <i class="fa fa-list bg-light"></i>
+                            Trainers
+                        </small>
                     </a>
-                    <a href="chart.html" class="nav-item nav-link">
-                        <i class="fa fa-chart-bar me-2"></i>
-                        Charts
-                    </a-->
+                    <a href="#" class="nav-item nav-link" onclick="list_all_trainees();">
+                        <small>
+                            <i class="fa fa-list bg-light"></i>
+                            Trainees
+                        </small>
+                    </a>
                 </div>
             </nav>
         </div>
@@ -277,7 +265,7 @@ $account = isset($_SESSION['connected']) ? $_SESSION['connected'] : header('loca
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/global.js"></script>
+    <script src="js/global_admin.js"></script>
 </body>
 
 </html>
